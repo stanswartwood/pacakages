@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>getDateTimeDiff</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   var cdt = g_form.getValue('sys_updated_on'); //First Date/Time field
+var sdt = g_form.getValue('opened_at'); //Second Date/Time field
+var dttype = 'minute'; //this can be day, hour, minute, second. By default it will return seconds.
+
+var ajax = new GlideAjax('ClientDateTimeUtils');
+ajax.addParam('sysparm_name','getDateTimeDiff');
+ajax.addParam('sysparm_fdt', cdt);
+ajax.addParam('sysparm_sdt', sdt);
+ajax.addParam('sysparm_difftype', dttype);
+ajax.getXML(doSomething);
+
+function doSomething(response){
+var answer = response.responseXML.documentElement.getAttribute("answer");
+alert(answer);
+	g_form.setValue('u_free', answer);
+}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-05 19:39:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>03b0b498dbe233001893cc30399619ff</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>getDateTimeDiff</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_script_client_03b0b498dbe233001893cc30399619ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-05 19:58:11</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

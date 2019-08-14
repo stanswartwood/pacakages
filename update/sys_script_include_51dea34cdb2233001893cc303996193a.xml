@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_364774_packages.HelloWorld</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>HelloWorld</name>
+        <script><![CDATA[var HelloWorld = Class.create();
+
+HelloWorld.prototype = Object.extendsObject(AbstractAjaxProcessor,
+{
+
+        helloWorld: function()
+        {
+
+                var c = this.getParameter('sysparm_user_name');
+
+                var diff = gs.dateDiff(gs.nowDateTime(), c, true);
+
+                return diff;
+
+        },
+
+        _privateFunction: function()
+        { // this function is not client callable         
+
+        }
+
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-05 14:48:54</sys_created_on>
+        <sys_id>51dea34cdb2233001893cc303996193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HelloWorld</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_script_include_51dea34cdb2233001893cc303996193a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-05 14:48:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

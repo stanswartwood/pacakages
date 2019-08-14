@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-06 21:17:12</sys_created_on>
+        <sys_id>dfd1b3b2dbfd33001893cc3039961900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_364774_packages_packages.x_364774_packages.packages_user</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_security_acl display_value="x_364774_packages_packages">1fd173b2dbfd33001893cc30399619fd</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_dfd1b3b2dbfd33001893cc3039961900</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-06 21:17:12</sys_updated_on>
+        <sys_user_role display_value="x_364774_packages.packages_user" name="x_364774_packages.packages_user">9fd17b72dbfd33001893cc30399619e8</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Packages" max_length="40" name="x_364774_packages_packages" type="collection">
+        <element attributes="barcode" label="Bar code" max_length="1000" name="bar_code" type="string"/>
+        <element label="Who" max_length="32" name="who" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="who"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>hello world</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate)
+{
+
+        if(isLoading || newValue == '')
+        {
+
+                return;
+
+        }
+
+        var val = g_form.getValue('opened_at');
+	//compare this with your field
+
+        alert(val);
+
+        var ga = new GlideAjax('HelloWorld');
+
+        ga.addParam('sysparm_name', 'helloWorld');
+
+        ga.addParam('sysparm_user_name', val);
+
+        ga.getXML(HelloWorldParse);
+
+        function HelloWorldParse(response)
+        {
+
+                var answer = response.responseXML.documentElement.getAttribute("answer");
+
+                alert(answer);
+
+        }
+
+        //Type appropriate comment here, and begin script below
+
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-05 14:45:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6d6da30cdb2233001893cc30399619b1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>hello world</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_script_client_6d6da30cdb2233001893cc30399619b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-05 15:20:27</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

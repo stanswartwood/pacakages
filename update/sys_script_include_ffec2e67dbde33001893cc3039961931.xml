@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_364774_packages.AjaxDurCalc</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>AjaxDurCalc</name>
+        <script><![CDATA[var AjaxDurCalc =Class.create();
+AjaxDurCalc.prototype= Object.extendsObject(AbstractAjaxProcessor,{
+ durCalc:function(){return gs.dateDiff(this.getParameter('sysparm_strt'),this.getParameter('sysparm_end'),false);}});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-03 20:43:17</sys_created_on>
+        <sys_id>ffec2e67dbde33001893cc3039961931</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AjaxDurCalc</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_script_include_ffec2e67dbde33001893cc3039961931</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-05 14:13:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="03f273f2dbfd33001893cc3039961997" sys_domain="global" table="x_364774_packages_packages" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-06 21:22:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43f273f2dbfd33001893cc3039961999</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_364774_packages_packages" name="x_364774_packages_packages" sys_domain="global" view="Default view">03f273f2dbfd33001893cc3039961997</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_364774_packages_packages" sys_domain="global" view="Default view">6ab2bfb2dbfd33001893cc30399619b6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-06 21:22:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-06 21:22:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03f273f2dbfd33001893cc303996199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_364774_packages_packages" name="x_364774_packages_packages" sys_domain="global" view="Default view">03f273f2dbfd33001893cc3039961997</sys_ui_form>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_364774_packages_packages" sys_domain="global" view="Default view">03f273f2dbfd33001893cc3039961996</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-06 21:22:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_364774_packages_packages</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-06 21:22:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03f273f2dbfd33001893cc3039961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_364774_packages_packages</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+            <sys_update_name>sys_ui_form_sections_03f273f2dbfd33001893cc3039961997</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-06 21:22:05</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

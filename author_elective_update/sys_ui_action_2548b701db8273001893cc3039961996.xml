@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Copy Story with tasks (7)</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[copyChange();
+function copyChange() {
+    //Get the current sys_id value for querying
+    var chgID = current.sys_id.toString();
+    //Initialize new change for insertion
+    var newChange = current;
+    newChange.number = global.getNextObjNumberPadded(); //Get next change number
+    newChange.requested_by_date = 'NULL';
+    newChange.start_date = 'NULL';
+    newChange.end_date = 'NULL';
+    newChange.calendar_duration = 'NULL';
+    newChange.opened_at = current.opened_at;
+    newChange.opened_by = current.opened_by;
+    newChange.sys_created_on = current.sys_created_on;
+    newChange.sys_created_by = current.sys_created_by;
+    current.insert();
+    
+    //Copy attachments for this change
+    if (typeof GlideSysAttachment != 'undefined')
+        GlideSysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+    else
+        Packages.com.glide.ui.SysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+    
+    //Copy associated tasks and CIs
+    copyTask(chgID);
+    //copyCI(chgID);
+    gs.addInfoMessage('Story Ticket ' + newChange.number + ' created.');
+    action.setRedirectURL(newChange);
+}
+
+function copyTask(chgID) {
+    //Find the current change tasks and copy them
+    var tasks = new GlideRecord('rm_scrum_task');
+    tasks.addQuery('rm_story', chgID);
+    tasks.query();
+    while(tasks.next()){
+        var taskID = tasks.sys_id.toString();
+        var newTask = tasks;
+        if (typeof GlideNumberManager != 'undefined')
+            newTask.number = GlideNumberManager.getNumber('rm_scrum_task');
+        else
+            newTask.number = Packages.com.glide.db.NumberManager.getNumber('rm_scrum_task'); //Get next change task number
+        newTask.rm_story = current.sys_id;
+        tasks.insert();
+        
+        //Copy attachments for this task
+        if (typeof GlideSysAttachment != 'undefined')
+            GlideSysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+        else
+            Packages.com.glide.ui.SysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+    }
+}
+
+function copyCI(chgID) {
+    //Get the task record being copied
+    var tskRec = new GlideRecord('task');
+    if(tskRec.get(chgID)){
+        //Copy over the affected CI list
+        var cis = new GlideRecord('task_ci');
+        cis.addQuery('task', chgID);
+                cis.addNullQuery('u_ci_group'); //Added to ensure that copying does not duplicate Group CIs
+        if(gs.getProperty('change.conflict.mode')=='advanced' && tskRec.cmdb_ci!=''){
+            //Prevent duplicate CI from being added
+            cis.addQuery('ci_item', '!=', tskRec.cmdb_ci.toString());
+        }
+        cis.query();
+        while(cis.next()){
+            var newCI = cis;
+            newCI.task = current.sys_id;
+            cis.insert();
+        }
+    }
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 21:31:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2548b701db8273001893cc3039961996</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Copy Story with tasks (7)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_ui_action_2548b701db8273001893cc3039961996</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-13 21:54:37</sys_updated_on>
+        <table>rm_story</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_ui_action_2548b701db8273001893cc3039961996</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;name&gt;Copy Story with tasks (7)&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[copyChange();
+function copyChange() {
+    //Get the current sys_id value for querying
+    var chgID = current.sys_id.toString();
+    //Initialize new change for insertion
+    var newChange = current;
+    newChange.number = global.getNextObjNumberPadded(); //Get next change number
+    newChange.requested_by_date = 'NULL';
+    newChange.start_date = 'NULL';
+    newChange.end_date = 'NULL';
+    newChange.calendar_duration = 'NULL';
+    newChange.opened_at = current.opened_at;
+    newChange.opened_by = current.opened_by;
+    newChange.sys_created_on = current.sys_created_on;
+    newChange.sys_created_by = current.sys_created_by;
+    current.insert();
+    
+    //Copy attachments for this change
+    if (typeof GlideSysAttachment != 'undefined')
+        GlideSysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+    else
+        Packages.com.glide.ui.SysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+    
+    //Copy associated tasks and CIs
+    copyTask(chgID);
+    //copyCI(chgID);
+    gs.addInfoMessage('Story Ticket ' + newChange.number + ' created.');
+    action.setRedirectURL(newChange);
+}
+
+function copyTask(chgID) {
+    //Find the current change tasks and copy them
+    var tasks = new GlideRecord('rm_scrum_task');
+    tasks.addQuery('rm_story', chgID);
+    tasks.query();
+    while(tasks.next()){
+        var taskID = tasks.sys_id.toString();
+        var newTask = tasks;
+        if (typeof GlideNumberManager != 'undefined')
+            newTask.number = GlideNumberManager.getNumber('rm_scrum_task');
+        else
+            newTask.number = Packages.com.glide.db.NumberManager.getNumber('rm_scrum_task'); //Get next change task number
+        newTask.rm_story = current.sys_id;
+        tasks.insert();
+        
+        //Copy attachments for this task
+        if (typeof GlideSysAttachment != 'undefined')
+            GlideSysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+        else
+            Packages.com.glide.ui.SysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+    }
+}
+
+function copyCI(chgID) {
+    //Get the task record being copied
+    var tskRec = new GlideRecord('task');
+    if(tskRec.get(chgID)){
+        //Copy over the affected CI list
+        var cis = new GlideRecord('task_ci');
+        cis.addQuery('task', chgID);
+                cis.addNullQuery('u_ci_group'); //Added to ensure that copying does not duplicate Group CIs
+        if(gs.getProperty('change.conflict.mode')=='advanced' &amp;&amp; tskRec.cmdb_ci!=''){
+            //Prevent duplicate CI from being added
+            cis.addQuery('ci_item', '!=', tskRec.cmdb_ci.toString());
+        }
+        cis.query();
+        while(cis.next()){
+            var newCI = cis;
+            newCI.task = current.sys_id;
+            cis.insert();
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-06-13 21:31:31&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2548b701db8273001893cc3039961996&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy Story with tasks (7)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Packages" source="x_364774_packages"&gt;23b13772dbfd33001893cc30399619aa&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Packages"&gt;23b13772dbfd33001893cc30399619aa&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_2548b701db8273001893cc3039961996&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-06-13 21:54:37&lt;/sys_updated_on&gt;&lt;table&gt;rm_story&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1316502138</payload_hash>
+        <record_name>Copy Story with tasks (7)</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 21:54:37</sys_created_on>
+        <sys_id>e78d3709db8273001893cc3039961975</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b52d5e1a60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-13 21:54:37</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>638d3709cf82730040a4e6dd1f7ca275</update_guid>
+        <update_guid_history>638d3709cf82730040a4e6dd1f7ca275:1316502138,283bbb8540827300fe1e998830a9fed0:-327292454,d359f34518827300e77ee58434b428e7:1316502138,f078370531827300f5792e623b60efa0:25988119,b168b701fa8273002c7bf456127716ef:805045444,6a58370556827300d50d569787ab96da:-989335772,0f48f305e5827300b395cf4bbe516b72:-865425477,e948b701b182730075446515ff834097:1018466299</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 15:03:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>3565c8a84e3845fa8d7a59db9f960964</sys_id>
+        <sys_metadata>2548b701db8273001893cc3039961996</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy Story with tasks (7)</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent display_value="Story">4a21f5b4db0233001893cc3039961966</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_ui_action_2548b701db8273001893cc3039961996</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_2548b701db8273001893cc3039961996">e78d3709db8273001893cc3039961975</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 15:03:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

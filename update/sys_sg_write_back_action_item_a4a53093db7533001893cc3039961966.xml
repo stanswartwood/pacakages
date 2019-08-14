@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
+        <description/>
+        <execution_script/>
+        <name>Create new package</name>
+        <query_condition/>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 20:52:24</sys_created_on>
+        <sys_id>a4a53093db7533001893cc3039961966</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Create new package</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_a4a53093db7533001893cc3039961966</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-10 19:16:31</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <template>short_description={{Short description}}^description={{Description}}^u_bar_code={{Bar Code}}^EQ</template>
+        <type>new</type>
+        <use_current_record_as_condition>false</use_current_record_as_condition>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4a53093db7533001893cc3039961966"/>
+</record_update>

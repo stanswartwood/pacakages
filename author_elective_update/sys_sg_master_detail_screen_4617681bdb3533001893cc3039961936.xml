@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_master_detail_screen">
+    <sys_sg_master_detail_screen action="DELETE">
+        <application_roles/>
+        <available_offline>false</available_offline>
+        <data_item display_value="QR">8c46201bdb3533001893cc3039961927</data_item>
+        <description/>
+        <fetch_type>not_required</fetch_type>
+        <hidden>false</hidden>
+        <icon display_value="compass">4617241bdb3533001893cc30399619ab</icon>
+        <name>QR Reader</name>
+        <order>30</order>
+        <parent>2c75ff87dbb133001893cc3039961906</parent>
+        <parent_table>sys_sg_folder</parent_table>
+        <roles_override/>
+        <sys_class_name>sys_sg_master_detail_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 19:48:15</sys_created_on>
+        <sys_id>4617681bdb3533001893cc3039961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>QR Reader</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_master_detail_screen_4617681bdb3533001893cc3039961936</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 19:48:15</sys_updated_on>
+    </sys_sg_master_detail_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=4617681bdb3533001893cc3039961936"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_sg_master_detail_screen_4617681bdb3533001893cc3039961936</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_master_detail_screen"><sys_sg_master_detail_screen action="INSERT_OR_UPDATE"><application_roles/><available_offline>false</available_offline><data_item display_value="QR">8c46201bdb3533001893cc3039961927</data_item><description/><fetch_type>not_required</fetch_type><hidden>false</hidden><icon display_value="compass">4617241bdb3533001893cc30399619ab</icon><name>QR Reader</name><order>30</order><parent>2c75ff87dbb133001893cc3039961906</parent><parent_table>sys_sg_folder</parent_table><roles_override/><sys_class_name>sys_sg_master_detail_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-06-07 19:48:15</sys_created_on><sys_id>4617681bdb3533001893cc3039961936</sys_id><sys_mod_count>0</sys_mod_count><sys_name>QR Reader</sys_name><sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package><sys_policy/><sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope><sys_update_name>sys_sg_master_detail_screen_4617681bdb3533001893cc3039961936</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-06-07 19:48:15</sys_updated_on></sys_sg_master_detail_screen><sys_translated_text action="delete_multiple" query="documentkey=4617681bdb3533001893cc3039961936"/></record_update>]]></payload>
+        <payload_hash>823713161</payload_hash>
+        <record_name>QR Reader</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 19:48:15</sys_created_on>
+        <sys_id>8217681bdb3533001893cc303996193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b337c0a0c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 19:48:15</sys_updated_on>
+        <type>Master-detail screen</type>
+        <update_guid>ca17681ba8353300b447d07a8ce1703c</update_guid>
+        <update_guid_history>ca17681ba8353300b447d07a8ce1703c:823713161</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-10 16:54:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_master_detail_screen">sys_sg_master_detail_screen</sys_db_object>
+        <sys_id>6119d9cab2f6490aa5275a46a3d108e9</sys_id>
+        <sys_metadata>4617681bdb3533001893cc3039961936</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>QR Reader</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_sg_master_detail_screen_4617681bdb3533001893cc3039961936</sys_update_name>
+        <sys_update_version display_value="sys_sg_master_detail_screen_4617681bdb3533001893cc3039961936">8217681bdb3533001893cc303996193d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-10 16:54:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

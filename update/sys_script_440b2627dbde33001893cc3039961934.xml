@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_364774_packages_packages_extension_from_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Bus Duration</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[//var start = g_form.getDisplayValue('opened_at');
+
+//var end = g_form.getDisplayValue('sys_updated_on');
+
+//var gdt1 = new GlideDateTime('sys_updated_on').getDisplayValue();
+var gdt1 = current.getValue('opened_at');
+var gd1 = gdt1.getDisplayValue();
+
+//var gdt2 = current.getValue('sys_updated_on');
+var gdt2 = GlideDateTime();
+var gd2 = gdt2.getDisplayValue();
+
+
+var dur = subtract(gd2,gd1);
+//var dur = GlideDateTime.subtract(GlideDateTime(current.opened_at),gs.nowDateTime());
+//var dur = GlideDateTime.subtract(gdt2, gdt1); //the difference between gdt1 and gdt2
+//var dur = GlideDateTime.subtract(end, start); //the difference between gdt1 and gdt2
+gs.info("diff display: {0}", dur.getDisplayValue());
+
+gs.info("diff seconds: {0}", dur.getNumericValue() / 1000);
+current.u_free = dur;
+current.u_bus_duration = dur;
+current.work_notes = dur;]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-03 20:34:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>440b2627dbde33001893cc3039961934</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>Bus Duration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_script_440b2627dbde33001893cc3039961934</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-05 23:49:23</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=440b2627dbde33001893cc3039961934"/>
+</record_update>

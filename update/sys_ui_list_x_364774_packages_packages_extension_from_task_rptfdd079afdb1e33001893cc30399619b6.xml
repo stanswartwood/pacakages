@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_364774_packages_packages_extension_from_task" version="2" view="RPTfdd079afdb1e33001893cc30399619b6">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>ddf0f9afdb1e33001893cc3039961976</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>opened_at</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>51f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>short_description</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>d1f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>caller_id</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>55f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>priority</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>d5f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>59f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>category</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>d9f0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assignment_group</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>5df0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assigned_to</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>ddf0f9afdb1e33001893cc3039961977</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>51f0f9afdb1e33001893cc3039961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_by</element>
+            <list_id display_value="x_364774_packages_packages_extension_from_task" element="NULL" name="x_364774_packages_packages_extension_from_task" parent="NULL" relationship="NULL" sys_domain="global" view="fdd079afdb1e33001893cc30399619bc">15f0f9afdb1e33001893cc3039961976</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_id>d1f0f9afdb1e33001893cc3039961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_364774_packages_packages_extension_from_task</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-03 16:20:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>15f0f9afdb1e33001893cc3039961976</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_364774_packages_packages_extension_from_task</sys_name>
+            <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+            <sys_update_name>sys_ui_list_x_364774_packages_packages_extension_from_task_RPTfdd079afdb1e33001893cc30399619b6</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-03 16:20:50</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rptfdd079afdb1e33001893cc30399619b6" name="RPTfdd079afdb1e33001893cc30399619b6">fdd079afdb1e33001893cc30399619bc</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

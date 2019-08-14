@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button">
+    <sys_sg_button action="DELETE">
+        <allow_images_upload>false</allow_images_upload>
+        <auto_redirection>false</auto_redirection>
+        <cancel_label/>
+        <condition/>
+        <condition_script/>
+        <condition_type>declarative</condition_type>
+        <confirm_label/>
+        <confirmation_message/>
+        <context>record</context>
+        <description/>
+        <destination_screen/>
+        <external_browser>false</external_browser>
+        <failure_message/>
+        <field_name/>
+        <jump_to_screen>false</jump_to_screen>
+        <link_label/>
+        <link_url/>
+        <mail_address/>
+        <mail_content/>
+        <mail_subject/>
+        <name>create</name>
+        <phone_number/>
+        <phone_type>cellular</phone_type>
+        <relative_url>true</relative_url>
+        <roles/>
+        <select_current_record>false</select_current_record>
+        <show_confirmation>false</show_confirmation>
+        <show_signature>false</show_signature>
+        <sms/>
+        <success_message/>
+        <sys_class_name>sys_sg_button</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 15:27:35</sys_created_on>
+        <sys_id>55ba2703dbb133001893cc3039961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>create</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_button_55ba2703dbb133001893cc3039961917</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 15:27:35</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <take_value_from_field>false</take_value_from_field>
+        <type>write_back</type>
+        <write_back_action_item display_value="Create">44f9e7cfdb7133001893cc303996195b</write_back_action_item>
+    </sys_sg_button>
+    <sys_translated_text action="delete_multiple" query="documentkey=55ba2703dbb133001893cc3039961917"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_sg_button_55ba2703dbb133001893cc3039961917</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button"><sys_sg_button action="INSERT_OR_UPDATE"><allow_images_upload>false</allow_images_upload><auto_redirection>false</auto_redirection><cancel_label/><condition/><condition_script/><condition_type>declarative</condition_type><confirm_label/><confirmation_message/><context>record</context><description/><destination_screen/><external_browser>false</external_browser><failure_message/><field_name/><jump_to_screen>false</jump_to_screen><link_label/><link_url/><mail_address/><mail_content/><mail_subject/><name>create</name><phone_number/><phone_type>cellular</phone_type><relative_url>true</relative_url><roles/><select_current_record>false</select_current_record><show_confirmation>false</show_confirmation><show_signature>false</show_signature><sms/><success_message/><sys_class_name>sys_sg_button</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-06-07 15:27:35</sys_created_on><sys_id>55ba2703dbb133001893cc3039961917</sys_id><sys_mod_count>0</sys_mod_count><sys_name>create</sys_name><sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package><sys_policy/><sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope><sys_update_name>sys_sg_button_55ba2703dbb133001893cc3039961917</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-06-07 15:27:35</sys_updated_on><table>x_364774_packages_packages_extension_from_task</table><take_value_from_field>false</take_value_from_field><type>write_back</type><write_back_action_item display_value="Create">44f9e7cfdb7133001893cc303996195b</write_back_action_item></sys_sg_button><sys_translated_text action="delete_multiple" query="documentkey=55ba2703dbb133001893cc3039961917"/></record_update>]]></payload>
+        <payload_hash>-1504657461</payload_hash>
+        <record_name>create</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 15:27:35</sys_created_on>
+        <sys_id>376beb03dbb133001893cc3039961911</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b328d63c00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 15:27:35</sys_updated_on>
+        <type>Function</type>
+        <update_guid>7f6beb03d8b133003db92b9601d77d10</update_guid>
+        <update_guid_history>7f6beb03d8b133003db92b9601d77d10:-1504657461</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 17:07:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_button">sys_sg_button</sys_db_object>
+        <sys_id>c0a6c1dd90a746b0a27f270fc7fb8c10</sys_id>
+        <sys_metadata>55ba2703dbb133001893cc3039961917</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>create</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_sg_button_55ba2703dbb133001893cc3039961917</sys_update_name>
+        <sys_update_version display_value="sys_sg_button_55ba2703dbb133001893cc3039961917">376beb03dbb133001893cc3039961911</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 17:07:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

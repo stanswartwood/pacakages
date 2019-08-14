@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_details_screen">
+    <sys_sg_details_screen action="INSERT_OR_UPDATE">
+        <application_roles/>
+        <available_offline>false</available_offline>
+        <data_item display_value="Packages this year">ccb6b30bdbb133001893cc30399619af</data_item>
+        <description>packages last year</description>
+        <dynamic_prefetch_count/>
+        <fetch_type>not_required</fetch_type>
+        <hidden>false</hidden>
+        <hide_filters>false</hide_filters>
+        <icon display_value="file-alt">1bda7f0bdbb133001893cc30399619c9</icon>
+        <item_view display_value="packages last year detail item view">67da7b8bdbb133001893cc3039961908</item_view>
+        <name>Details</name>
+        <order>10</order>
+        <parent>6bda7f8bdbb133001893cc30399619c7</parent>
+        <parent_table>sys_sg_master_item</parent_table>
+        <roles_override/>
+        <sys_class_name>sys_sg_details_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 16:35:02</sys_created_on>
+        <sys_id>33da7f8bdbb133001893cc30399619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Details</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_details_screen_33da7f8bdbb133001893cc30399619f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 16:35:02</sys_updated_on>
+        <table/>
+    </sys_sg_details_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=33da7f8bdbb133001893cc30399619f0"/>
+</record_update>

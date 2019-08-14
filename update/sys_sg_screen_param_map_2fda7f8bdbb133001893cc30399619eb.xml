@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_screen_param_map">
+    <sys_sg_screen_param_map action="INSERT_OR_UPDATE">
+        <item_parameter display_value="Period end">d0b77f0bdbb133001893cc30399619bd</item_parameter>
+        <screen display_value="packages last year">2fdaf78bdbb133001893cc3039961992</screen>
+        <sys_class_name>sys_sg_screen_param_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 16:35:01</sys_created_on>
+        <sys_id>2fda7f8bdbb133001893cc30399619eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d0b77f0bdbb133001893cc30399619bd</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_screen_param_map_2fda7f8bdbb133001893cc30399619eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 16:35:01</sys_updated_on>
+        <ui_parameter display_value="Period end">2fda7f8bdbb133001893cc30399619e9</ui_parameter>
+    </sys_sg_screen_param_map>
+</record_update>

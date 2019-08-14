@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="DELETE">
+        <description>udpate packages picked up</description>
+        <execution_script/>
+        <name>Update Packages</name>
+        <query_condition table="x_364774_packages_packages_extension_from_task">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </query_condition>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 17:10:19</sys_created_on>
+        <sys_id>34a28053dbf133001893cc30399619b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update Packages</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_34a28053dbf133001893cc30399619b3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 18:58:54</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <template/>
+        <type>update</type>
+        <use_current_record_as_condition>true</use_current_record_as_condition>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=34a28053dbf133001893cc30399619b3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_sg_write_back_action_item_34a28053dbf133001893cc30399619b3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item"><sys_sg_write_back_action_item action="INSERT_OR_UPDATE"><description>udpate packages picked up</description><execution_script/><name>Update Packages</name><query_condition table="x_364774_packages_packages_extension_from_task">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></query_condition><sys_class_name>sys_sg_write_back_action_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-06-07 17:10:19</sys_created_on><sys_id>34a28053dbf133001893cc30399619b3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Update Packages</sys_name><sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package><sys_policy/><sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope><sys_update_name>sys_sg_write_back_action_item_34a28053dbf133001893cc30399619b3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-06-07 18:58:54</sys_updated_on><table>x_364774_packages_packages_extension_from_task</table><template/><type>update</type><use_current_record_as_condition>true</use_current_record_as_condition></sys_sg_write_back_action_item><sys_translated_text action="delete_multiple" query="documentkey=34a28053dbf133001893cc30399619b3"/></record_update>]]></payload>
+        <payload_hash>-138295667</payload_hash>
+        <record_name>Update Packages</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 18:58:55</sys_created_on>
+        <sys_id>57cb5413db3533001893cc3039961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b334eddb20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 18:58:55</sys_updated_on>
+        <type>Action item</type>
+        <update_guid>dfcb5413ab3533004fcdb76659761520</update_guid>
+        <update_guid_history>dfcb5413ab3533004fcdb76659761520:-138295667,fcf2881398f1330079c872747f3a81d6:-2009056602</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 20:50:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_write_back_action_item">sys_sg_write_back_action_item</sys_db_object>
+        <sys_id>1fc354e2c6ee4f68b16a92509868e640</sys_id>
+        <sys_metadata>34a28053dbf133001893cc30399619b3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Packages</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_sg_write_back_action_item_34a28053dbf133001893cc30399619b3</sys_update_name>
+        <sys_update_version display_value="sys_sg_write_back_action_item_34a28053dbf133001893cc30399619b3">57cb5413db3533001893cc3039961921</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 20:50:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

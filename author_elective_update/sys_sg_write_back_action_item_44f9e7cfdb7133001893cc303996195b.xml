@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="DELETE">
+        <description/>
+        <execution_script/>
+        <name>Create</name>
+        <query_condition/>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 15:21:27</sys_created_on>
+        <sys_id>44f9e7cfdb7133001893cc303996195b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_44f9e7cfdb7133001893cc303996195b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 15:21:27</sys_updated_on>
+        <table>x_364774_packages_packages_extension_from_task</table>
+        <template/>
+        <type>new</type>
+        <use_current_record_as_condition>false</use_current_record_as_condition>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=44f9e7cfdb7133001893cc303996195b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_sg_write_back_action_item_44f9e7cfdb7133001893cc303996195b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item"><sys_sg_write_back_action_item action="INSERT_OR_UPDATE"><description/><execution_script/><name>Create</name><query_condition/><sys_class_name>sys_sg_write_back_action_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-06-07 15:21:27</sys_created_on><sys_id>44f9e7cfdb7133001893cc303996195b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Create</sys_name><sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package><sys_policy/><sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope><sys_update_name>sys_sg_write_back_action_item_44f9e7cfdb7133001893cc303996195b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-06-07 15:21:27</sys_updated_on><table>x_364774_packages_packages_extension_from_task</table><template/><type>new</type><use_current_record_as_condition>false</use_current_record_as_condition></sys_sg_write_back_action_item><sys_translated_text action="delete_multiple" query="documentkey=44f9e7cfdb7133001893cc303996195b"/></record_update>]]></payload>
+        <payload_hash>546709454</payload_hash>
+        <record_name>Create</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 15:21:27</sys_created_on>
+        <sys_id>060ae3cfdb7133001893cc3039961957</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b3287c80b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 15:21:27</sys_updated_on>
+        <type>Action item</type>
+        <update_guid>4e0ae3cfec713300dba450904340ba56</update_guid>
+        <update_guid_history>4e0ae3cfec713300dba450904340ba56:546709454</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 17:08:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_write_back_action_item">sys_sg_write_back_action_item</sys_db_object>
+        <sys_id>5f37392b393940fcadedb66abd4fdda1</sys_id>
+        <sys_metadata>44f9e7cfdb7133001893cc303996195b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_sg_write_back_action_item_44f9e7cfdb7133001893cc303996195b</sys_update_name>
+        <sys_update_version display_value="sys_sg_write_back_action_item_44f9e7cfdb7133001893cc303996195b">060ae3cfdb7133001893cc3039961957</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 17:08:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

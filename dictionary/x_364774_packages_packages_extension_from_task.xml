@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Packages - Extension from task" max_length="40" name="x_364774_packages_packages_extension_from_task" sizeclass="7" type="collection">
+        <element label="Available for pickup" max_length="4000" name="available_for_pickup" type="glide_list"/>
+        <element label="Assign to count" max_length="40" name="u_assign_to_count" type="integer"/>
+        <element attributes="barcode,edge_encryption_enabled=true" label="Bar code" max_length="40" name="u_bar_code" type="string"/>
+        <element label="Custom Business Duration" max_length="40" name="u_bus_duration" type="glide_duration"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Choice 1" max_length="40" name="u_choice_1" type="string">
+            <choice>
+                <element inactive_on_update="false" label="update" sequence="0" value="update"/>
+                <element inactive_on_update="false" label="insert" sequence="1" value="insert"/>
+                <element inactive_on_update="false" label="delete" sequence="2" value="delete"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="u_choice_1" dependent_on_field="u_choice_1" label="Choice 2" max_length="40" name="u_choice_2" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="update" inactive_on_update="false" label="update 1" sequence="0" value="update 1"/>
+                <element dependent_value="update" inactive_on_update="false" label="update 2" sequence="1" value="update 2"/>
+                <element dependent_value="update" inactive_on_update="false" label="update 3" sequence="2" value="update 3"/>
+            </choice>
+        </element>
+        <element label="Custom Duration" max_length="40" name="u_duration" type="glide_duration"/>
+        <element label="New File Attachment" max_length="40" name="u_file_attachment_1" type="file_attachment"/>
+        <element attributes="edge_encryption_enabled=true" label="Free" max_length="40" name="u_free" type="string"/>
+    </element>
+</database>

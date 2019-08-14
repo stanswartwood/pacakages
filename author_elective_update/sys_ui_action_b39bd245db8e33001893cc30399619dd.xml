@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Copy Story with tasks (5)</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[//copy Story is working
+var chgID = current.sys_id.toString();
+gs.addInfoMessage('sysid ' + chgID + ' copy story.');
+var newChange = new GlideRecord('rm_story');
+newChange.initialize();
+newChange.short_description = current.short_description;
+newChange.assignment_group = current.assignment_group;
+newChange.description = current.description;
+newChange.insert();
+
+//Copy attachments for this change - this is working
+if (typeof GlideSysAttachment != 'undefined')
+    GlideSysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+else
+    Packages.com.glide.ui.SysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+copyTask();
+//copyCI(); don't need
+gs.addInfoMessage('Story ' + newChange.number + ' created.');
+action.setRedirectURL(newChange);
+
+//copy scrum tasks is not working
+function copyTask() {
+    //Find the current scrum tasks and copy them
+  gs.addInfoMessage('copy task.');
+	var tasks = new GlideRecord('rm_scrum_task');
+	gs.addInfoMessage('scrum task.');
+    tasks.addQuery('story', chgID);
+	gs.addInfoMessage('scrum query.');
+	gs.addInfoMessage('sysid ' + chgID + ' copyTask.');
+    tasks.query();
+    while (tasks.next()) {
+        var taskID = tasks.sys_id.toString();
+		gs.addInfoMessage('task sys_id ' + taskID + ' task.');
+        //Copy the task record to a new task record
+        var newTask = new GlideRecord('rm_scrum_task');
+        newTask.initialize();
+        newTask.story = newChange; //this is a reference - is this correct?
+        newTask.short_description = tasks.short_description;
+        newTask.description = tasks.description;
+        newTask.assignment_group = tasks.assignment_group;
+        newTask.assigned_to = tasks.assigned_to;
+        newTask.insert();
+		
+
+        //Copy attachments for this task - this is not working since scrum tasks are not copying
+        if (typeof GlideSysAttachment != 'undefined')
+            GlideSysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+        else
+            Packages.com.glide.ui.SysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+    }
+}
+//turning off all the below
+//function copyCI() {
+//Copy over the affected CI list
+//var currentCI = new GlideRecord('task_ci');
+//currentCI.addQuery('task', current.sys_id);
+//currentCI.addNullQuery('u_ci_group'); //Added to ensure that copying does not duplicate Group CIs
+//currentCI.query();
+//while(currentCI.next()){
+//var newCI = new GlideRecord('task_ci');
+//newCI.initialize();
+//newCI.task = newChange.sys_id;
+//newCI.ci_item = currentCI.ci_item;
+//newCI.insert();
+//}
+//}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 14:46:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b39bd245db8e33001893cc30399619dd</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Copy Story with tasks (5)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_update_name>sys_ui_action_b39bd245db8e33001893cc30399619dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 14:06:37</sys_updated_on>
+        <table>rm_story</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Packages">23b13772dbfd33001893cc30399619aa</application>
+        <file_path/>
+        <instance_id>21109ca3dbf4fb40387021c40596195e</instance_id>
+        <instance_name>dev82131</instance_name>
+        <name>sys_ui_action_b39bd245db8e33001893cc30399619dd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;name&gt;Copy Story with tasks (5)&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[//copy Story is working
+var chgID = current.sys_id.toString();
+gs.addInfoMessage('sysid ' + chgID + ' copy story.');
+var newChange = new GlideRecord('rm_story');
+newChange.initialize();
+newChange.short_description = current.short_description;
+newChange.assignment_group = current.assignment_group;
+newChange.description = current.description;
+newChange.insert();
+
+//Copy attachments for this change - this is working
+if (typeof GlideSysAttachment != 'undefined')
+    GlideSysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+else
+    Packages.com.glide.ui.SysAttachment.copy('rm_story', chgID, 'rm_story', newChange.sys_id);
+copyTask();
+//copyCI(); don't need
+gs.addInfoMessage('Story ' + newChange.number + ' created.');
+action.setRedirectURL(newChange);
+
+//copy scrum tasks is not working
+function copyTask() {
+    //Find the current scrum tasks and copy them
+  gs.addInfoMessage('copy task.');
+	var tasks = new GlideRecord('rm_scrum_task');
+	gs.addInfoMessage('scrum task.');
+    tasks.addQuery('story', chgID);
+	gs.addInfoMessage('scrum query.');
+	gs.addInfoMessage('sysid ' + chgID + ' copyTask.');
+    tasks.query();
+    while (tasks.next()) {
+        var taskID = tasks.sys_id.toString();
+		gs.addInfoMessage('task sys_id ' + taskID + ' task.');
+        //Copy the task record to a new task record
+        var newTask = new GlideRecord('rm_scrum_task');
+        newTask.initialize();
+        newTask.story = newChange; //this is a reference - is this correct?
+        newTask.short_description = tasks.short_description;
+        newTask.description = tasks.description;
+        newTask.assignment_group = tasks.assignment_group;
+        newTask.assigned_to = tasks.assigned_to;
+        newTask.insert();
+		
+
+        //Copy attachments for this task - this is not working since scrum tasks are not copying
+        if (typeof GlideSysAttachment != 'undefined')
+            GlideSysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+        else
+            Packages.com.glide.ui.SysAttachment.copy('rm_scrum_task', taskID, 'rm_scrum_task', tasks.sys_id);
+    }
+}
+//turning off all the below
+//function copyCI() {
+//Copy over the affected CI list
+//var currentCI = new GlideRecord('task_ci');
+//currentCI.addQuery('task', current.sys_id);
+//currentCI.addNullQuery('u_ci_group'); //Added to ensure that copying does not duplicate Group CIs
+//currentCI.query();
+//while(currentCI.next()){
+//var newCI = new GlideRecord('task_ci');
+//newCI.initialize();
+//newCI.task = newChange.sys_id;
+//newCI.ci_item = currentCI.ci_item;
+//newCI.insert();
+//}
+//}]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-06-13 14:46:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b39bd245db8e33001893cc30399619dd&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy Story with tasks (5)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Packages" source="x_364774_packages"&gt;23b13772dbfd33001893cc30399619aa&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Packages"&gt;23b13772dbfd33001893cc30399619aa&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_b39bd245db8e33001893cc30399619dd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-06-14 14:06:37&lt;/sys_updated_on&gt;&lt;table&gt;rm_story&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-394511627</payload_hash>
+        <record_name>Copy Story with tasks (5)</record_name>
+        <reverted_from/>
+        <source>e7b17f72dbfd33001893cc303996194f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 14:06:37</sys_created_on>
+        <sys_id>420c97d1db0233001893cc3039961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b564fc8a80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 14:06:37</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>4a0c97d11f0233004067c673bef90f20</update_guid>
+        <update_guid_history>4a0c97d11f0233004067c673bef90f20:-394511627,e393c34102027300d8c5d3a2b387eb1f:1018466299,1ac147cdb4ce3300cf7775f317512d59:-197291689,410107cdf3ce3300a6b288cb5d8584e6:1650412601,65600b8d9bce33000a35bcb75c1d0c5e:1262640135,c610038db9ce33000045f5163bb4ac14:216742951,f8df7e4d8cce33007abdd08f859ad74d:-1428452034,459ffa4d83ce3300f473f7879310671c:-1394752785,f56fb60d65ce3300993d38d3416b7c7a:-368420465,a73fb60dacce3300902ddced07027d22:119841750,c1ce360de8ce3300e935613df6ca0f9f:1534522993,05a07ac1b2ce33004e956d9e4930b8d8:1584083830,f66f1a09eb8e3300af937e914694b8a9:649576589,f74f16c52e8e3300eee05ab98500c8f9:783892639,ba2f16c5488e3300ed8039b8d8dfccf4:649576589,922c1ec1678e33008b355a3b9807092f:-616423419,a6cb9645e98e3300ae38af12b8cc7a76:146915839,b79bd245298e3300f906ffb1eddc8ede:-1916450435</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 15:03:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>8fa9a00effec472cb68d890f888d8190</sys_id>
+        <sys_metadata>b39bd245db8e33001893cc30399619dd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy Story with tasks (5)</sys_name>
+        <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
+        <sys_parent display_value="Story">4a21f5b4db0233001893cc3039961966</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
+        <sys_scope_delete display_value="">444ca9ad533a41ae8730a7e48f42c664</sys_scope_delete>
+        <sys_update_name>sys_ui_action_b39bd245db8e33001893cc30399619dd</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_b39bd245db8e33001893cc30399619dd">420c97d1db0233001893cc3039961921</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 15:03:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
