@@ -36,6 +36,7 @@
 		//var schedule = new GlideSchedule('38fa64edc0a8016400f4a5724b0434b8'); //24x7
 		var duration = schedule.duration(startDate, endDate);
         //var duration = GlideDateTime.subtract(startDate, endDate);
+	//just a note for source control test
 		var hours = duration.getNumericValue()/(60*60*100); //numeric value is in milliseconds.
 		var businessDay = math.floor(hours /8); //(rounding down) as long as there are always 9 hours in your 
 		var businessDuration = new GlideDuration(businessDay * (24*60*60*1000));
@@ -54,7 +55,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d90c581ddbe233001893cc30399619b3</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Bus Duration 5</sys_name>
         <sys_overrides/>
         <sys_package display_value="Packages" source="x_364774_packages">23b13772dbfd33001893cc30399619aa</sys_package>
@@ -62,7 +63,7 @@
         <sys_scope display_value="Packages">23b13772dbfd33001893cc30399619aa</sys_scope>
         <sys_update_name>sys_script_d90c581ddbe233001893cc30399619b3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-29 20:02:17</sys_updated_on>
+        <sys_updated_on>2019-08-14 17:14:40</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
